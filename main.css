@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #EEEEEE;
+  font-size: 18px;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .left {
+  background: linear-gradient(160deg, #601df7 0%, #8800ff 100%);
+  padding: 1em;
+}
+
+.container .left h1, .container .left p {
+  color: #fff;
+}
+
+.container .left .light {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2em;
+}
+
+.container .logo {
+  width: 120px;
+}
+
+.container .content h1 {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container .content p {
+  line-height: 1.7em;
+}
+
+.container .content .right p {
+  margin-top: 2em;
+  margin-bottom: 0;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.container .content .right .attention {
+  width: 100%;
+  margin: .5em auto 0;
+}
+
+.container .content .right .avatar {
+  margin-top: 2em;
+  width: 3em;
+  border-radius: 50%;
+}
+
+.container .content .right img .arrow {
+  width: 15em;
+}
+
+input, button {
+  width: calc(100% - 3em);
+  padding: .5em;
+  font-size: 1.3rem;
+  outline: none;
+  margin: 1em;
+}
+
+button {
+  width: calc(100% - 2em);
+  background: #8800ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  button {
+    width: 60%;
+  }
+  input {
+    width: calc(60% - 1em);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    margin: 3em 0;
+  }
+  p {
+    line-height: 1.7em;
+  }
+  .inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% auto;
+        grid-template-columns: 55% auto;
+  }
+  .inner .left {
+    text-align: left;
+    padding: 0 2em;
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+  }
+  .inner .left .content {
+    padding: 0 3em;
+  }
+  .inner .left h1 {
+    margin: 0;
+    font-size: 2.4em;
+  }
+  .inner .left h1 span {
+    display: block;
+  }
+  .inner .right {
+    text-align: right;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 2em 1.5em;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .inner .right input {
+    width: calc(100% - 2em);
+    margin: 1em 0;
+  }
+  .inner .right button {
+    width: calc(100% - 1em);
+  }
+  .proto-container {
+    -webkit-clip-path: inset(0 45% 0 0);
+            clip-path: inset(0 45% 0 0);
+    position: absolute;
+    top: 20%;
+    height: 70%;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .proto-container .proto {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    width: 19%;
+    height: 80%;
+    float: left;
+    margin-left: 1em;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+}
+/*# sourceMappingURL=main.css.map */

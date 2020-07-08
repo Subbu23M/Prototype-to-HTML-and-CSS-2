@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #EEEEEE;
+    font-size: 18px;
+    height: 100vh;
+}
+
+.container{
+    margin: 0 auto;
+    text-align: center;
+
+    .left{
+        background: linear-gradient(160deg,#601df7 0%,#8800ff 100%);
+        padding: 1em;
+
+        h1,p
+        {
+            color: #fff;
+        }
+
+        .light{
+            color: rgba(255,255,255,.7);
+            margin-top: 2em;
+        }
+    }
+
+    .logo{
+        width: 120px;
+    }
+    .content{
+        h1{
+            margin-top: .5em;
+            margin-bottom: .5em;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        p{
+            line-height: 1.7em;
+        }
+
+        .right{
+            p{
+                margin-top: 2em;
+                margin-bottom: 0;
+                margin-left: .5em;
+                margin-right: .5em;
+            }
+
+            .attention{
+                width: 100%;
+                margin: .5em auto 0;
+            }
+
+            .avatar{
+                margin-top: 2em;
+                width: 3em;
+                border-radius: 50%;
+            }
+            img .arrow{
+                width: 15em;
+            }
+        }
+    }
+}
+input,button{
+    width: calc(100% - 3em);
+    padding: .5em;
+    font-size: 1.3rem;
+    outline: none;
+    margin: 1em;
+}
+
+button{
+    width: calc(100% - 2em);
+    background: #8800ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+// Media Queries
+@media only screen and (min-width:768px){
+    body{
+        font-size: 20px;
+    }
+
+    button{
+        width: 60%;
+    }
+
+    input{
+        width: calc(60% - 1em);
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .logo{
+        margin: 3em 0;
+    }
+
+    p{
+        line-height: 1.7em;
+    }
+
+    .inner{
+        display: grid;
+        grid-template-columns: 55% auto;
+
+        .left{
+            text-align: left;
+            padding: 0 2em;
+            height: 100vh;
+            display: grid;
+
+            .content{
+                padding: 0 3em;
+            }
+
+            h1{
+                margin: 0;
+                font-size: 2.4em;
+
+                span{
+                    display: block;
+                }
+            }
+        }
+        .right{
+            text-align: right;
+            align-self: center;
+            padding: 0 2em 1.5em;
+            justify-self: center;
+
+            input{
+                width: calc(100% - 2em);
+                margin: 1em 0;
+            }
+
+            button{
+                width: calc(100% - 1em);
+            }
+        }
+    }
+    .proto-container{
+        clip-path: inset(0 45% 0 0);
+        position: absolute;
+        top: 20%;
+        height: 70%;
+        width: 100%;
+        z-index: 0;
+        pointer-events: none;
+
+        .proto{
+            border: 3px solid rgba(255,255,255,.1);
+            width: 19%;
+            height: 80%;
+            float: left;
+            margin-left: 1em;
+            transform: translateX(10%);
+        }
+    }
+}

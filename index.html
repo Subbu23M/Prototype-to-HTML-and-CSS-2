@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title> Prototype to HTML and CSS </title>
+</head>
+<body>
+    <div class="proto-container">
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>
+    </div>
+    
+    <div class="container">
+        <div class="inner">
+            <div class="left">
+                <img src="./LogoMakr.png" alt="logo" class="logo">
+                <div class="content">
+                    <h1>
+                        Complete
+                        <span>
+                            UI Design Course
+                        </span>
+                    </h1>
+
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, est? Fuga harum debitis nobis odio omnis eveniet saepe consequuntur? Officiis?
+                    </p>
+
+                    <p class="light">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, repellendus!
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <p>
+                    Lorem ipsum dolor sit amet.
+                </p>
+
+                <input type="text" name="email" id="email" placeholder="subbuvenkat2495@gmail.com">
+                <button> Notify Me </button>
+
+                <div class="attention">
+                    <img src="./avataaars.svg" alt="avatar" class="avatar">
+                    <img src="./arrow.jpg" alt="arrow" class="arrow">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+         let left = document.querySelector('.left');
+        let content = document.querySelector('.content');
+        let protos = document.querySelectorAll('.proto');
+
+        left.addEventListener('mousemove', (event) => {
+            let move = (event.clientX * 0.05) + 4;
+            let move2 = (event.clientX * 0.003);
+            content.style.transform = `translateX(-${move2}%)`;
+
+            protos.forEach((proto) => {
+                proto.style.transform = `translateX(${move}%)`;
+            })
+        })
+    </script>
+</body>
+</html>
